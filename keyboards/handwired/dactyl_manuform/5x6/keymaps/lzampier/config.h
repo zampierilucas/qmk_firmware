@@ -1,0 +1,22 @@
+#pragma once
+
+// #define MASTER_LEFT
+#define MASTER_RIGHT
+
+#define USE_I2C
+#define DEBOUNCE 5
+// // #define USB_MAX_POWER_CONSUMPTION 500
+#define USB_POLLING_INTERVAL_MS 1
+#define USB_SUSPEND_WAKEUP_DELAY 300
+
+#ifdef RGB_MATRIX_ENABLE
+    #define RGB_MATRIX_MAXIMUM_BRIGHTNESS 80
+    #define RGB_MATRIX_SPLIT { 32, 32}
+    #define SPLIT_TRANSPORT_MIRROR
+
+    // #define RGB_MATRIX_DEFAULT_MODE RGB_MATRIX_TYPING_HEATMAP // Sets the default mode, if none has been set
+    #define RGB_MATRIX_KEYPRESSES
+    #define ENABLE_RGB_MATRIX_TYPING_HEATMAP
+    #define ENABLE_RGB_MATRIX_RAINBOW_PINWHEELS
+    #define RGB_MATRIX_FRAMEBUFFER_EFFECTS
+#endif
