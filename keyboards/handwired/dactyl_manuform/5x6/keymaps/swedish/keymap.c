@@ -1,4 +1,4 @@
-/* A Swedish XMonad layout for the Dactyl Manuform 5x6 Keyboard */ 
+/* A Swedish XMonad layout for the Dactyl Manuform 5x6 Keyboard */
 
 #include QMK_KEYBOARD_H
 #include "keymap_swedish.h"
@@ -47,7 +47,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      _______, _______, _______, _______, _______, _______,                        QK_BOOT, _______, _______, _______, KC_MUTE, SE_PIPE,
      _______, _______, _______, _______, _______, _______,                        KC_HOME, KC_PGDN, KC_PGUP, KC_END , KC_VOLU, SE_BSLS,
      _______, _______, _______, _______, _______, _______,                        _______, KC_MPLY, KC_MPRV, KC_MNXT, KC_VOLD, _______,
-                       _______, _______,                                                            _______, _______, 
+                       _______, _______,                                                            _______, _______,
                                                   _______, _______,      _______, _______,
                                                   _______, _______,      _______, _______,
                                                   _______, _______,      _______, _______

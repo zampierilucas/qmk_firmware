@@ -1,3 +1,4 @@
+<<<<<<< HEAD:keyboards/maple_computing/lets_split_eh/config.h
 /*
 Copyright 2012 Jun Wako <wakojun@gmail.com>
 Copyright 2015 Jack Humbert
@@ -21,3 +22,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // The 'EH' has previously forced use of I2C so this default has been kept
 // however users can undef to use serial
 #define USE_I2C
+=======
+>>>>>>> 5dc31ffc65 (My dactyl config):keyboards/split67/config.h
