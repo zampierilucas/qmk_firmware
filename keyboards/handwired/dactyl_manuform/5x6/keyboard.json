@@ -1,26 +1,25 @@
 {
     "keyboard_name": "Dactyl-Manuform (5x6)",
-    "manufacturer": "tshort",
+    "manufacturer": "lzampier",
     "url": "",
     "maintainer": "qmk",
     "usb": {
         "vid": "0x444D",
         "pid": "0x3536",
-        "device_version": "0.0.1"
-    },
-    "rgblight": {
-        "led_count": 12
+        "device_version": "0.0.1",
+        "force_nkro": true,
+        "polling_interval": 1
     },
     "ws2812": {
         "pin": "D3"
     },
+    "build":{
+        "lto": true
+    },
     "features": {
-        "bootmagic": false,
-        "command": true,
-        "console": false,
+        "rgb_matrix": true,
         "extrakey": true,
-        "mousekey": true,
-        "nkro": false
+        "nkro": true
     },
     "qmk": {
         "locking": {
@@ -28,14 +27,72 @@
             "resync": true
         }
     },
+    "rgb_matrix": {
+        "enable": true,
+        "driver": "ws2812",
+        "speed": 32,
+        "max_brightness": 180,
+        "split_count":[32, 32],
+        "animations": {
+            "gradient_up_down": false,
+            "gradient_left_right": false,
+            "breathing": true,
+            "band_sat": true,
+            "band_val": false,
+            "band_pinwheel_sat": false,
+            "band_pinwheel_val": false,
+            "band_spiral_sat": false,
+            "band_spiral_val": false,
+            "cycle_all": false,
+            "cycle_left_right": false,
+            "cycle_up_down": false,
+            "rainbow_moving_chevron": true,
+            "cycle_out_in": false,
+            "cycle_out_in_dual": false,
+            "cycle_pinwheel": false,
+            "cycle_spiral": false,
+            "dual_beacon": false,
+            "rainbow_beacon": false,
+            "rainbow_pinwheels": false,
+            "raindrops": false,
+            "jellybean_raindrops": false,
+	        "hue_breathing": false,
+            "hue_pendulum": false,
+            "hue_wave": false,
+            "typing_heatmap": true,
+            "solid_reactive_simple": true,
+	        "solid_reactive": false,
+            "solid_reactive_wide": false,
+            "solid_reactive_multiwide": false,
+            "solid_reactive_cross": false,
+            "solid_reactive_multicross": false,
+            "solid_reactive_nexus": false,
+            "solid_reactive_multinexus": false,
+            "splash": false,
+            "multisplash": false,
+            "solid_splash": false,
+            "solid_multisplash": false
+        }
+    },
+    "matrix":{
+        "debounce": 0
+    },
     "matrix_pins": {
-        "cols": ["D4", "C6", "D7", "E6", "B4", "B5"],
-        "rows": ["F6", "F7", "B1", "B3", "B2", "B6"]
+        "cols": ["B6", "B2", "B3", "B1", "F7", "F6"],
+        "rows": ["D4", "C6", "D7", "E6", "B4", "B5"]
     },
     "diode_direction": "COL2ROW",
     "split": {
         "enabled": true,
-        "soft_serial_pin": "D0"
+        "soft_serial_pin": "D0",
+        "transport": {
+            "protocol": "i2c",
+            "sync_matrix_state": true
+        },
+        "usb_detect": {
+            "enabled": true,
+            "polling_interval": 1
+        }
     },
     "processor": "atmega32u4",
     "bootloader": "caterina",

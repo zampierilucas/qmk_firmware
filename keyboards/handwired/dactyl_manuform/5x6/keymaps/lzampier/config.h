@@ -1,0 +1,24 @@
+#pragma once
+
+#define RGBLIGHT_SLEEP
+#define OLEDDISPLAY_TIMEOUT 10
+#define OLED_BRIGHTNESS 120
+// #define RGBLIGHT_ENABLE yhes
+// #define RGBLIGHT_TIMEOUT 15  // in Minutes
+// #define DEBOUNCE 1
+
+
+#define OLEDDISPLAY_TIMEOUT 10
+#define OLED_BRIGHTNESS 120
+
+// #define RGB_MATRIX_ENABLE true
+#define USB_MAX_POWER_CONSUMPTION 500
+#define RGB_DISABLE_WHEN_USB_SUSPENDED
+#define RGB_MATRIX_LED_COUNT 64
+#define DRIVER_LED_TOTAL 64
+
+// #define RGB_MATRIX_KEYPRESSES
+
+#define EE_HANDS
+// #define MASTER_LEFT
+// #define MASTER_RIGHT
