@@ -28,8 +28,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_LOWER] = LAYOUT_5x6(
         KC_GRV , KC_F11 , KC_F12 , KC_F13 , KC_F14          , KC_F15       ,            LALT(KC_1)   , LALT(KC_2)      , LALT(KC_3) , LALT(KC_4) , LALT(KC_5),  KC_DEL ,
-        _______, RGB_HUI, RGB_SAI, _______, _______         , KC_LBRC      ,            KC_RBRC      , _______         , KC_UP      , _______    , _GAMING   , KC_PLUS ,
-        _______, RGB_HUD, RGB_SAD, _______, _______         , KC_LPRN      ,            KC_RPRN      , KC_LEFT         , KC_DOWN    , KC_RGHT    , _QWERTY   , KC_QUOTE,
+        _______, RGB_HUI, RGB_SAI, _______, _______         , KC_LBRC      ,            KC_RBRC      , _______         , KC_UP      , _______    , KC_GAMING   , KC_PLUS ,
+        _______, RGB_HUD, RGB_SAD, _______, _______         , KC_LPRN      ,            KC_RPRN      , KC_LEFT         , KC_DOWN    , KC_RGHT    , KC_QWERTY   , KC_QUOTE,
         _______, _______, _______, _______, RGB_MODE_FORWARD, QK_BOOTLOADER,            QK_BOOTLOADER, RGB_MODE_FORWARD, KC_P2      , KC_P3      , KC_EQL    , KC_UNDS ,
                          _______, KC_PSCR,                                                                              _______     , KC_P0      ,
                                   _______, _______         ,                                          _______         , _______     ,
@@ -53,7 +53,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TAB , KC_TAB , KC_Q   , KC_W   , KC_E     , KC_R   ,           KC_Y     , KC_U   , KC_I   , KC_O  , KC_P   , KC_MINS,
         KC_LSFT, KC_LSFT, KC_A   , KC_S   , KC_D     , KC_F   ,           KC_H     , KC_J   , KC_K   , KC_L  , KC_SCLN, KC_QUOTE,
         KC_LCTL, KC_LCTL, KC_Z   , KC_X   , KC_C     , KC_V   ,           KC_N     , KC_M   , KC_COMM, KC_DOT, KC_SLSH, KC_BACKSLASH,
-                          KC_LBRC, KC_RBRC,                                                   KC_PLUS, _QWERTY,
+                          KC_LBRC, KC_RBRC,                                                   KC_PLUS, KC_QWERTY,
                                             RAISE    , KC_SPC ,           KC_ENT   , LOWER  ,
                                             KC_LGUI  , KC_LALT,           KC_QWERTY, KC_LGUI,
                                             KC_QWERTY, KC_GRV ,           KC_HOME  , KC_END
@@ -407,18 +407,14 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     } };
 
     void suspend_power_down_kb(void) {
-        if (is_keyboard_master()) {
-            rgb_matrix_disable();
-            oled_off();
-            suspend_power_down_user();
-        }
+        oled_off();
+        rgb_matrix_disable();
+        suspend_power_down_user();
     }
 
     void suspend_wakeup_init_kb(void) {
-        if (is_keyboard_master()) {
-            suspend_wakeup_init_user();
-            rgb_matrix_enable();
-            oled_on();
-        }
+        oled_on();
+        rgb_matrix_enable();
+        suspend_wakeup_init_user();
     }
 #endif
