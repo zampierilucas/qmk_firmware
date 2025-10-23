@@ -28,9 +28,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_LOWER] = LAYOUT_5x6(
         KC_GRV , KC_F11 , KC_F12 , KC_F13 , KC_F14          , KC_F15       ,            LALT(KC_1)   , LALT(KC_2)      , LALT(KC_3) , LALT(KC_4) , LALT(KC_5),  KC_DEL ,
-        _______, RGB_HUI, RGB_SAI, _______, _______         , KC_LBRC      ,            KC_RBRC      , _______         , KC_UP      , _______    , KC_GAMING   , KC_PLUS ,
-        _______, RGB_HUD, RGB_SAD, _______, _______         , KC_LPRN      ,            KC_RPRN      , KC_LEFT         , KC_DOWN    , KC_RGHT    , KC_QWERTY   , KC_QUOTE,
-        _______, _______, _______, _______, RGB_MODE_FORWARD, QK_BOOTLOADER,            QK_BOOTLOADER, RGB_MODE_FORWARD, KC_P2      , KC_P3      , KC_EQL    , KC_UNDS ,
+        _______, RM_HUEU, RM_SATU, _______, _______         , KC_LBRC      ,            KC_RBRC      , _______         , KC_UP      , _______    , KC_GAMING   , KC_PLUS ,
+        _______, RM_HUED, RM_SATD, _______, _______         , KC_LPRN      ,            KC_RPRN      , KC_LEFT         , KC_DOWN    , KC_RGHT    , KC_QWERTY   , KC_QUOTE,
+        _______, _______, _______, _______, RM_NEXT, QK_BOOTLOADER,            QK_BOOTLOADER, RM_NEXT, KC_P2      , KC_P3      , KC_EQL    , KC_UNDS ,
                          _______, KC_PSCR,                                                                              _______     , KC_P0      ,
                                   _______, _______         ,                                          _______         , _______     ,
                                            _______         , _______      ,            _______      , _______,
@@ -40,9 +40,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_RAISE] = LAYOUT_5x6(
           KC_GRV , KC_F1  , KC_F2  , KC_F3        , KC_F4           , KC_F5        ,               KC_F6        , KC_F7       , KC_F8  , KC_F9  , KC_F10 , KC_F11 ,
-          _______, KC_F11 , KC_F12 ,  _______     , _______         , KC_LBRC      ,               RGB_VAI      , _______     , KC_NUM , KC_INS , KC_SCRL, KC_VOLU,
-          _______, _______, _______,  _______     , _______         , KC_LPRN      ,               RGB_VAD      , KC_MPRV     , KC_MPLY, KC_MNXT, _______, KC_VOLD,
-          _______, _______, _______, RALT(KC_COMM), RGB_MODE_FORWARD, QK_BOOTLOADER,               QK_BOOTLOADER, _______     , _______, _______, _______, _______,
+          _______, KC_F11 , KC_F12 ,  _______     , _______         , KC_LBRC      ,               RM_VALU      , _______     , KC_NUM , KC_INS , KC_SCRL, KC_VOLU,
+          _______, _______, _______,  _______     , _______         , KC_LPRN      ,               RM_VALD      , KC_MPRV     , KC_MPLY, KC_MNXT, _______, KC_VOLD,
+          _______, _______, _______, RALT(KC_COMM), RM_NEXT, QK_BOOTLOADER,               QK_BOOTLOADER, _______     , _______, _______, _______, _______,
                             _______, KC_PSCR      ,                                                                             _______, _______,
                                                     _______         , _______      ,               _______      , _______     ,
                                                     _______         , _______      ,               _______      , _______     ,

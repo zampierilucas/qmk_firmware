@@ -6,9 +6,11 @@
     "usb": {
         "vid": "0x444D",
         "pid": "0x3536",
-        "device_version": "0.0.1",
-        "force_nkro": true,
+        "device_version": "0.1.0",
         "polling_interval": 1
+    },
+    "nkro": {
+        "default_on": true
     },
     "ws2812": {
         "pin": "D3"
@@ -17,9 +19,18 @@
         "lto": true
     },
     "features": {
-        "rgb_matrix": true,
+        "console": false,
         "extrakey": true,
-        "nkro": true
+        "nkro": true,
+        "magic": true,
+        "rgb_matrix": false,
+        "oled": true,
+        "wpm": true
+    },
+    "oled": {
+        "driver": "ssd1306",
+        "timeout": 10000,
+        "brightness": 120
     },
     "qmk": {
         "locking": {
@@ -28,7 +39,7 @@
         }
     },
     "rgb_matrix": {
-        "enable": true,
+        "enable": false,
         "driver": "ws2812",
         "speed": 32,
         "max_brightness": 160,
@@ -75,7 +86,7 @@
         }
     },
     "matrix":{
-        "debounce": 0
+        "debounce": 1
     },
     "matrix_pins": {
         "cols": ["B6", "B2", "B3", "B1", "F7", "F6"],

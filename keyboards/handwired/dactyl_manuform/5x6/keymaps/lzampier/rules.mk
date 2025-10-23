@@ -1,23 +1,6 @@
-# # Build Options
+# Build Options
+# Most settings have been moved to keyboard.json for data-driven configuration
 
-WPM_ENABLE = yes
-OLED_ENABLE = yes
-OLED_DRIVER = ssd1306
-# RGBLIGHT_ENABLE = yes
-RGB_MATRIX_ENABLE = yes
-RGB_MATRIX_LED_COUNT = 64
-#define RGBLIGHT_SLEEP
+# These settings remain here as they're not yet fully supported in JSON or are keymap-specific
 NO_USB_STARTUP_CHECK = yes
-
-#define OLEDDISPLAY_TIMEOUT 10
-#define OLED_BRIGHTNESS 120
-#define RGBLIGHT_TIMEOUT 15  // in Minutes
-#define DEBOUNCE 1
-#define USB_MAX_POWER_CONSUMPTION 500
-#define RGB_DISABLE_WHEN_USB_SUSPENDED
-#define RGB_MATRIX_LED_COUNT 64
-#define RGB_MATRIX_MAXIMUM_BRIGHTNESS 200
-
-#define EE_HANDS
-#define MASTER_LEFT
-#define MASTER_RIGHT
+KEYBOARD_SHARED_EP = yes  # Free up USB endpoint for NKRO

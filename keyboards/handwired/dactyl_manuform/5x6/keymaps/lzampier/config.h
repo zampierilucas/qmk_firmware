@@ -1,25 +1,21 @@
 #pragma once
 
-#define RGBLIGHT_SLEEP
+// NKRO settings - Force NKRO to be enabled on boot
+#define FORCE_NKRO
+
+// Debug settings
+// #define SERIAL_DEBUG
+
+// OLED settings
+#define OLED_UPDATE_INTERVAL 50
 #define OLEDDISPLAY_TIMEOUT 10
-#define OLED_BRIGHTNESS 120
-// #define RGBLIGHT_ENABLE yhes
-// #define RGBLIGHT_TIMEOUT 15  // in Minutes
-// #define DEBOUNCE 1
 
+// RGB settings (disabled - not using RGB)
+// #define RGBLIGHT_SLEEP
+// #define RGB_DISABLE_WHEN_USB_SUSPENDED
 
-#define OLEDDISPLAY_TIMEOUT 10
-#define OLED_BRIGHTNESS 120
-
-// #define RGB_MATRIX_ENABLE true
+// Power settings
 #define USB_MAX_POWER_CONSUMPTION 500
-#define RGB_DISABLE_WHEN_USB_SUSPENDED true
-#define RGB_MATRIX_LED_COUNT 64
-#define DRIVER_LED_TOTAL 64
 
-#define SPLIT_USB_DETECT
-// #define RGB_MATRIX_KEYPRESSES
-
+// Split keyboard settings
 #define EE_HANDS
-// #define MASTER_LEFT
-// #define MASTER_RIGHT
